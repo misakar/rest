@@ -1,0 +1,22 @@
+1: python logging
+    logger: 应用程序可以直接使用的接口
+    handler: 将logger创建的日志记录发送到合适的目的输出
+    filter: 细读设备,决定输出哪条日志纪录
+    formatter: 决定日志输出的最终格式
+
+    写log的顺序
+        创建Logger对象
+            |
+        配置Logger对象的日志级别
+            |
+        创建handler对象
+            |
+        绑定handler到logger中
+            |
+        使用logger写日志
+
+    1. 使用 logging.getLogger 创建logger对象, 不要直接实例化
+        这样可以保证多个实例使用同一日志输出时，不同实例的日志名是不一样的
+        可以使用__name__属性,即用实例名命名日志名
+    2. 设置logger级别: debug, info, warning, error, critical
+
