@@ -36,23 +36,23 @@ and now you have:
             --authentication.py (HTTPBasicAuthentication use jws token)
 
 ## Decorators
-### @json
+#### @json
 
     @json decorators can jsonify the response value(rv)
 
-### @login_required
+#### @login_required
 
     decorator @login_required can add a login authentication to a view function
 
-### @rate_limit(max=.., per=..)
+#### @rate_limit(max=.., per=..)
 
     @rate_limit can limit the request from same ip
 
-### @cache
+#### @cache
 
     @cache add cache
 
-### @etags
+#### @etags
 
     @etags add etags
 
