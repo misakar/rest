@@ -4,8 +4,7 @@
     ~~~~~~~~
 
         _mkdir_p(path)
-
-        a function to crate path floder
+        _mkdir_p(path) function (:sys mkdir -p path:)
 """
 
 import os, errno

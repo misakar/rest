@@ -17,9 +17,15 @@ a simple python restfull API framework
     this function can verify user token to get user id
 
 #### :cli auth:
-<code>$ auth init api_1_0</code>
+auth command can auto generate authentication.py file for API auth
 
-    auth command can auto generate authentication.py file for API auth
+    cd the api blueprint folder
+
+    $ auth init
+    \_ api_name: api_1_0
+    \_ token_time(s): 3600*24
+
+    [info] HttpBasicAuth init done...!
 
 ## Decorators
 ### @json

@@ -44,13 +44,8 @@ def init(api_blueprint_name):
         from rest.auth import AuthUser
         class User(AuthUser):
             pass
-
-        cd the api blueprint folder
-
-        $ auth init
-        \_ api_name: api_1_0
-        \_ token_time(s): 3600*24
-        [info] HttpBasicAuth init done...!
+        $ auth init api_blueprint_name --time=3600*24
+        (default time is 3600s)
 
     :param api_blueprint_name:
         the name of api blueprint
@@ -70,5 +65,4 @@ def init(api_blueprint_name):
 
     logger.info("start generate api blueprint and httpbasicauth file...")
 
-    # create project destination path
     _mkdir_p(dst_path)
