@@ -34,9 +34,9 @@ def cli():
 
 
 @click.command()
-@click.argument('api_blueprint_name')
-@click.option('--time', default=False, help="the expiration time of token")
-def init(api_blueprint_name):
+@click.argument('api_name')
+@click.argument('token_time')
+def init(api_name, token_time):
     """
     rest auth cli
 
@@ -45,24 +45,36 @@ def init(api_blueprint_name):
         class User(AuthUser):
             pass
 
-        cd the api blueprint folder
+        cd the folder you want to create api
+        and type:
 
         $ auth init
-        \_ api_name: api_1_0
+        \_ api_name: api
         \_ token_time(s): 3600*24
-        [info] HttpBasicAuth init done...!
+        [info] api init done...!
+
+        and now you have:
+        app--api--__init__.py
+                \_authentication.py
 
     :param api_blueprint_name:
         the name of api blueprint
     :return:
         None
     """
-    if not api_blueprint_name:
-        logger.warning("Api blueprint name can't be empty!")
+    api_name = raw_input('\_ api_name: \n')
+    token_time = int(raw_input('\_ token_time: ')
+
+    if not api_name:
+        logger.warning("api name can't be empty!")
         return
 
-    # project destination path
-    dst_path = os.path.join(os.getcwd(), api_blueprint_name)
+    if not toke_time:
+        logger.warning("token expiration can't be empty")
+        return
+
+    # api destination path
+    dst_path = os.path.join(os.getcwd(), api_name)
 
     if os.path.isdir(dst_path):
         logger.warning("api blueprint path already exists!")
@@ -72,3 +84,8 @@ def init(api_blueprint_name):
 
     # create project destination path
     _mkdir_p(dst_path)
+
+
+##############
+cli.add_command(init)
+##############
