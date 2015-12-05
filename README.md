@@ -32,7 +32,7 @@ then:
 and now you have:
 
     app--api--__init__.py (api blueprint and you just need regist it on
-app)        |
+    app)    |
             --authentication.py (HTTPBasicAuthentication use jws token)
 
 ## Decorators
