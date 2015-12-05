@@ -17,5 +17,6 @@ def _mkdir_p(path):
     except OSError ad e:
         if (e.errno == errno.EEXIST) and (os.path.isdir(path)):
             # path already exits
+            # we do not need error msg
             pass
         else: raise
