@@ -1,8 +1,10 @@
 # coding:utf-8
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from flask import current_app
+
 
 class AuthUser(object):
-    from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
-    from flask import current_app
+
 
     def generate_auth_token(self, expiration):
         """generate a token"""
