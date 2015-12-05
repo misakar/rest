@@ -12,8 +12,8 @@ import os, errno
 
 def _mkdir_p(path):
     try:
-        os.makedirs(path):
-    except OSError ad e:
+        os.makedirs(path)
+    except OSError as e:
         if (e.errno == errno.EEXIST) and (os.path.isdir(path)):
             # path already exits
             # we do not need error msg

@@ -27,12 +27,6 @@ logger.addHandler(console)
 # operators
 from operators._mkdir_p import _mkdir_p
 
-# templates
-from templates._init_py import _init_py
-from templates._auth_py import _auth_py
-
-
-# click
 @click.group()
 def cli():
     """rest auth cli"""
@@ -40,8 +34,6 @@ def cli():
 
 
 @click.command()
-# @click.argument('api_name')
-# @click.argument('token_time')
 def init():
     """
     rest auth cli
@@ -68,16 +60,14 @@ def init():
     :return:
         None
     """
-    api_name = click.prompt('\_ app_name: ', default='api')
-    token_time = click.prompt('\_ token_time(s): ', type=int, default=3600)
+    api_name = raw_input('\_ api_name: \n')
+    token_time = int(raw_input('\_ token_time: ')
 
-    if not api_name:
+    if api_name is None:
         logger.warning("api name can't be empty!")
-        return
 
-    if not token_time:
+    if toke_time is None:
         logger.warning("token expiration can't be empty")
-        return
 
     # api destination path
     dst_path = os.path.join(os.getcwd(), api_name)
@@ -91,25 +81,7 @@ def init():
     # create project destination path
     _mkdir_p(dst_path)
 
-    # create __init__.py file
-    os.chdir(dst_path)
-    init_code = _init_py % (api_name, api_name)
-    with open("__init__.py", 'w+') as f:
-        f.write(init_code)
 
-    logger.info('init file __init__.py...')
-
-    # create authentication file
-    init_code = _auth_py % (token_time, token_time)
-    os.chdir(dst_path)
-    with open("authentication.py", 'w+') as f:
-        f.write(init_code)
-
-    logger.info('init file authentication.py...')
-
-    logger.info('api init done!')
-
-
-######################
+##############
 cli.add_command(init)
-######################
+##############

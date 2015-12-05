@@ -16,7 +16,7 @@ with open('requirement.txt') as f:
 
 setup(
     name='rest',
-    version=rest.__version__,
+    version='0.15',
     packages=find_packages(),
     include_package_data=True,
     description='simple flask restful api framework',
