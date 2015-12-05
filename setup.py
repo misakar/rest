@@ -5,7 +5,7 @@ import rest
 # entry_points
 entry_points = {
     'console_scripts':[
-        "api = rest.cli.auth:cli",
+        "api = rest.cli.api:cli",
     ]
 }
 

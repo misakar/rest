@@ -48,7 +48,7 @@ def init(api_name, token_time):
         cd the folder you want to create api
         and type:
 
-        $ auth init
+        $ api init
         \_ api_name: api
         \_ token_time(s): 3600*24
         [info] api init done...!

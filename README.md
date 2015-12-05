@@ -1,8 +1,7 @@
 rest
 ===
-a simple python restfull API framework
 
-## API
+    a simple restfull API framework for flask
 
 ## Authentication
 ### HTTPBasicAuthentication
@@ -16,16 +15,25 @@ a simple python restfull API framework
 
     this function can verify user token to get user id
 
-#### :cli auth:
-auth command can auto generate authentication.py file for API auth
+#### :cli api:
+api command can auto create api blueprint and init HTTPBasicAuthentication
+(you need to make your User model inhert class AuthUser)
+then:
 
-    cd the api blueprint folder
+    cd the folder you want to create restful api,
+    and type:
 
     $ auth init
-    \_ api_name: api_1_0
+    \_ api_name: api
     \_ token_time(s): 3600*24
 
     [info] HttpBasicAuth init done...!
+
+and now you have:
+
+    app--api--__init__.py (api blueprint and you just need regist it on
+app)        |
+            --authentication.py (HTTPBasicAuthentication use jws token)
 
 ## Decorators
 ### @json
