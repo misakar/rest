@@ -1,0 +1,9 @@
+*.pyc
+-1
+**/*.pyc
+
+venv
+migrations
+search.db
+muxi_data.sqlite
+.idea
