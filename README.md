@@ -48,4 +48,17 @@ httpie测试
 
 
 ## rest 框架 API 文档
+见: https://github.com/neo1218/rest/blob/master/doc%2Fapi.md
 
+## 安装
+目前rest还在开发中, 可以使用源码安装rest
+
+    $ git clone https://github.com/neo1218/rest.git
+    $ cd rest
+    $ sudo pip install .
+
+如果在终端输入 api
+
+    $ api
+
+出现帮助信息, 则rest安装成功
