@@ -1,7 +1,10 @@
-[rest] a simple restfull API framework for flask
+[rest] a simple API framework for flask
 ===
 
-![rest](http://7xj431.com1.z0.glb.clouddn.com/i_need_rest_by_gada_chan-d34h65n.jpg)
+![rest](http://7xj431.com1.z0.glb.clouddn.com/i_need_rest_by_gada_chan-d34h65n.jpg) <br/>
+
+    rest是一个flask API框架, 帮助flask开发者快速处理http基础验证,简化API编写,
+    同时基于mockjs格式的接口文档一键生成虚拟数据,方便前后端在分离模式下的合作开发
 
 ## Hello rest, 从Token开始!
 ### Token
@@ -47,8 +50,9 @@ httpie测试
 ![token](http://7xj431.com1.z0.glb.clouddn.com/g)
 
 
-## rest 框架 API 文档
-见: https://github.com/neo1218/rest/blob/master/doc%2Fapi.md
+## rest 框架的更多特性
+[装饰器]() : 使用装饰器简化你的代码
+[前后端合作]() : mockjs 接口文档一键生成后端虚拟数据库数据
 
 ## 安装
 目前rest还在开发中, 可以使用源码安装rest
