@@ -34,10 +34,12 @@ def get_users():
 
 
 """
-使用pagination装饰器
+使用paginate装饰器
 """
+from rest.decorators import paginate
+
 per_page = current_app.config["PAGINATION_CONFIG"]
 @api.route('/users/', methods=['GET'])
-@pagination(User, per_page)
+@paginate(User, per_page)
 def get_users():
     pass
