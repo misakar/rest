@@ -14,5 +14,8 @@ rest 框架文档: 装饰器
 <strong>Model:</strong> 资源类 <br/>
 <strong>per_page:</strong> 每页的数据量 <br/>
 
+httpie测试:
+![分页](http://7xj431.com1.z0.glb.clouddn.com/1111png)
+
 @paginate 装饰器遵循最新的API分页标准, 在头部定义link
 详见:http://tools.ietf.org/html/rfc5988
