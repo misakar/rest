@@ -11,7 +11,9 @@
 
     token 是包含用户认证信息的一个签名,
     通过token可以安全的使用HTTPBasicAuth验证, 避免敏感信息的泄漏。
+
     rest框架生成的token基于itsdangeours的JWS(TimedJSONWebSignatureSerializer)模块。
+    使用rest框架，几乎不用编写任何代码, 仅需3步即可创建并获取token
 
 ### step1: 继承AuthUser类
 在models.py中导入AuthUser类, 在User类中继承
@@ -32,15 +34,13 @@
 
 api_name 就是你的api蓝图的名字, 默认是api,当然你可以加上版本号<br/>
 token_time 是token的寿命,默认是一个小时(3600s) <br/>
-
-### step3: 注册API蓝图
-和注册其他蓝图一样
+然后注册api蓝图
 
     from api import api as api_blueprint
     app.register_blueprint(api_blueprint, url_prefix='/api/v1.0')
 
 
-### step4: 获取token
+### step3: 获取token
 启动你的flask应用
 
     在请求头中加上用户验证 访问 http://127.0.0.1:5000/api/v1.0/token/
@@ -51,7 +51,7 @@ httpie测试
 
 
 ## rest 框架的更多特性
-[装饰器]() : 使用装饰器简化你的代码
+[装饰器](https://github.com/neo1218/rest/blob/master/doc%2Fdecorate.md) : 使用装饰器简化你的代码 <br/>
 [前后端合作]() : mockjs 接口文档一键生成后端虚拟数据库数据
 
 ## 安装
