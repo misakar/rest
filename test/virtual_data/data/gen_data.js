@@ -2,7 +2,7 @@
 
 var Mock = require('mockjs');
 var data = Mock.mock({
-    "lists|1-10": [{
+    "lists|20": [{
         "id|+1": 1,
         "name": "haha"
     }]

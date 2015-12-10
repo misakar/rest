@@ -4,10 +4,18 @@ from . import api
 from flask import request, jsonify
 from ..models import User
 from .. import db
+from rest.decorators import paginate
+import json
 
 
-@api.route('/user/', methods=["POST"])
-def new_user():
+@api.route('/users/', methods=["GET"])
+@paginate(User, 5)
+def get_users():
+    pass
+
+
+@api.route('/users/', methods=["POST"])
+def new_users():
     """
     创建一个用户
     现在希望批量创建用户
@@ -23,3 +31,4 @@ def new_user():
         "msg": "created user",
         "count": count
     }), 201
+

@@ -40,9 +40,4 @@ per_page = current_app.config["PAGINATION_CONFIG"]
 @api.route('/users/', methods=['GET'])
 @pagination(User, per_page)
 def get_users():
-    user = User.query.all()
-    return json.dumps(
-        [user.to_json() for user in users],
-        ensure_ascii=False,
-        indent=1
-    ), 200
+    pass

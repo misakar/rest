@@ -14,6 +14,13 @@ class User(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     name = db.Column(db.String(60), index=True)
 
+    def to_json(self):
+        json_user = {
+            "id": self.id,
+            "name": self.name
+        }
+        return json_user
+
     @staticmethod
     def from_json(request_json):
         id = request_json.get('id')

@@ -1,13 +1,13 @@
-"""update
+"""init
 
-Revision ID: 23b1c4142422
+Revision ID: 4d606f705ca6
 Revises: None
-Create Date: 2015-12-10 20:43:37.178546
+Create Date: 2015-12-11 01:13:13.679603
 
 """
 
 # revision identifiers, used by Alembic.
-revision = '23b1c4142422'
+revision = '4d606f705ca6'
 down_revision = None
 
 from alembic import op
