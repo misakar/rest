@@ -56,6 +56,7 @@ def init():
 
         $ api init
         \_ api_name: api
+        \_ auth_field: email
         \_ token_time(s): 3600*24
         [info] api init done...!
 
@@ -68,11 +69,16 @@ def init():
     :return:
         None
     """
-    api_name = click.prompt('\_ app_name: ', default='api')
+    api_name = click.prompt('\_ api_name: ', default='api')
+    auth_field = click.prompt('\_ auth_field: ', default='username')
     token_time = click.prompt('\_ token_time(s): ', type=int, default=3600)
 
     if not api_name:
         logger.warning("api name can't be empty!")
+        return
+
+    if not auth_field:
+        logger.warning("auth field can't be empty")
         return
 
     if not token_time:
@@ -100,7 +106,7 @@ def init():
     logger.info('init file __init__.py...')
 
     # create authentication file
-    init_code = _auth_py % (token_time, token_time)
+    init_code = _auth_py % (auth_field, token_time, token_time)
     os.chdir(dst_path)
     with open("authentication.py", 'w+') as f:
         f.write(init_code)

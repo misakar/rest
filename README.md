@@ -28,11 +28,13 @@
 
     $ api init
     \_ api_name [api]:
+    \_ auth_field [username]:
     \_ token_time [3600s]:
 
     api init done !
 
 api_name 就是你的api蓝图的名字, 默认是api,当然你可以加上版本号<br/>
+auth_field 是你处理验证的字段名称，比如用户名或者邮箱 <br/>
 token_time 是token的寿命,默认是一个小时(3600s) <br/>
 然后注册api蓝图
 
