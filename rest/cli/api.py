@@ -30,6 +30,7 @@ from operators._mkdir_p import _mkdir_p
 # templates
 from templates._init_py import _init_py
 from templates._auth_py import _auth_py
+from templates._mock_js import _mock_js
 
 
 # click
@@ -89,7 +90,7 @@ def init():
     dst_path = os.path.join(os.getcwd(), api_name)
 
     if os.path.isdir(dst_path):
-        logger.warning("api blueprint path already exists!")
+        logger.warning("api blueprint path already exists!\nnot create new api blueprint")
         return
 
     logger.info("start generate api blueprint and httpbasicauth file...")
@@ -112,6 +113,16 @@ def init():
         f.write(init_code)
 
     logger.info('init file authentication.py...')
+
+    # create mock/gen_data.js file
+    mock_path = os.path.join(dst_path, 'mock')
+    _mkdir_p(mock_path)
+    init_code = _mock_js
+    os.chdir(mock_path)
+    with open("gen_data.js", 'w+') as f:
+        f.write(init_code)
+
+    logger.info('init file mock/gen_data.js...')
 
     logger.info('api init done!')
 
