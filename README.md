@@ -4,7 +4,7 @@
 ![rest](http://7xj431.com1.z0.glb.clouddn.com/i_need_rest_by_gada_chan-d34h65n.jpg) <br/>
 
     rest是一个flask API框架, 帮助flask开发者快速处理http基础验证,简化API编写,
-    同时基于mockjs格式的接口文档一键生成虚拟数据,方便前后端在分离模式下的合作开发
+    同时基于mockjs生成后端数据库虚拟数据,方便前后端在分离模式下的合作开发
 
 ## Hello rest, 从Token开始!
 ### Token
@@ -56,7 +56,7 @@ httpie测试
 [🍺 __ 装饰器](https://github.com/neo1218/rest/blob/master/doc%2Fdecorate.md) : 使用装饰器简化你的代码 <br/>
 - @paginate 分页装饰器
 
-[😊 __ 前后端合作](https://github.com/neo1218/rest/blob/master/doc%2Fmock.md) : mockjs 接口文档一键生成后端虚拟数据库数据
+[😊 __ 前后端合作](https://github.com/neo1218/rest/blob/master/doc%2Fmock.md) : 使用mockjs生成后端虚拟数据库数据
 
 ## 安装
 目前rest还在开发中, 可以使用源码安装rest
