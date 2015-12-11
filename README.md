@@ -54,6 +54,8 @@ httpie测试
 
 ## rest 框架的更多特性
 [🍺 __ 装饰器](https://github.com/neo1218/rest/blob/master/doc%2Fdecorate.md) : 使用装饰器简化你的代码 <br/>
+    - @paginate 分页装饰器
+
 [😊 __ 前后端合作](https://github.com/neo1218/rest/blob/master/doc%2Fmock.md) : mockjs 接口文档一键生成后端虚拟数据库数据
 
 ## 安装
