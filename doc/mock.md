@@ -1,5 +1,6 @@
 rest 框架文档 mock
 ===
+![mockjs](http://7xj431.com1.z0.glb.clouddn.com/9.08.54.png)
 
 ## Mockjs
 [官网](http://mockjs.com/)
