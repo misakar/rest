@@ -1,9 +1,9 @@
-[rest] a simple API framework for flask
+[rest] a simple API Lib for flask
 ===
 
 ![rest](http://7xj431.com1.z0.glb.clouddn.com/i_need_rest_by_gada_chan-d34h65n.jpg) <br/>
 
-    rest是一个flask API框架, 帮助flask开发者快速处理http基础验证,简化API编写,
+    rest是一个flask API库, 帮助flask开发者快速处理http基础验证,简化API编写,
     同时基于mockjs生成后端数据库虚拟数据,方便前后端在分离模式下的合作开发
 
 ## Hello rest, 从Token开始!
