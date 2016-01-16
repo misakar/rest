@@ -13,6 +13,7 @@ rest 框架文档: 装饰器
 #### @paginate(Model, per_page)
 <strong>Model:</strong> 资源类 <br/>
 <strong>per_page:</strong> 每页的数据量 <br/>
+在使用paginate装饰器之前需要在相应类中实现<strong>to_json()</strong>方法<br/>
 
 httpie测试:
 ![分页](http://7xj431.com1.z0.glb.clouddn.com/1111png)
