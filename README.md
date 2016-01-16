@@ -1,16 +1,18 @@
 [rest] a simple API Lib for flask
 ===
-
+[注]: 现在不敢称RESTfull, 但是会尽量遵守[rest
+APi规范](https://github.com/BingyanStudio/share-and-standards/blob/master/RESTful-API-design-standards.md)
+<br/>
 ![rest](http://7xj431.com1.z0.glb.clouddn.com/i_need_rest_by_gada_chan-d34h65n.jpg) <br/>
 
-    rest是一个flask API库, 帮助flask开发者快速处理http基础验证,简化API编写,
+    rest是一个flask API库, 帮助flask开发者快速处理http基础验证,简化API的编写,
     同时基于mockjs生成后端数据库虚拟数据,方便前后端在分离模式下的合作开发
 
 ## Hello rest, 从Token开始!
 ### Token
 
-    token 是包含用户认证信息的一个签名,
-    通过token可以安全的使用HTTPBasicAuth验证, 避免敏感信息的泄漏。
+    token 是包含用户信息(id)的一个加密字段,
+    通过token可以安全的使用HTTPBasicAuth验证, 避免直接使用密码进行验证。
 
     rest框架生成的token基于itsdangeours的JWS(TimedJSONWebSignatureSerializer)模块。
     使用rest框架，几乎不用编写任何代码, 仅需3步即可创建并获取token

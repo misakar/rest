@@ -16,10 +16,10 @@ with open('requirement.txt') as f:
 
 setup(
     name='rest',
-    version='0.22',
+    version='0.25',
     packages=find_packages(),
     include_package_data=True,
-    description='simple flask restful api framework',
+    description='simple flask restful api lib',
     long_description=open('README.md').read(),
     url='https://github.com/neo1218/rest',
     author='neo1218',

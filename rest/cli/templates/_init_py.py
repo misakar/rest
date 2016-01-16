@@ -4,5 +4,5 @@ from flask import Blueprint
 
 %s = Blueprint('%s', __name__)
 
-from . import authenticate
+from . import authentication
 '''
