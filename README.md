@@ -16,7 +16,8 @@ rest 提供了如下几种类型的工具方便API的编写:
     - [@paginate](https://github.com/neo1218/rest/blob/master/doc/paginate.md)
     - [@admin_required](https://github.com/neo1218/rest/blob/master/doc/admin.md)
     - [@permission_required](https://github.com/neo1218/rest/blob/master/doc/permission.md)
-    - [@auth.login_required](https://github.com/neo1218/rest/blob/master/doc/login.md)
+- **auth**flask-httpauth扩展对象
+    - [flask-httpauth](http://flask-httpauth.readthedocs.org/en/latest/)
 
 ## example:
 - 这个flask项目使用mana和rest构建了一个提供基本CRUD API服务的web应用
