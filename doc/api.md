@@ -34,7 +34,8 @@ token_time是token的寿命, 默认是3600s <br/>
 如果使用mana构建项目则已经实现了is_admin方法。
 
 ## AuthUser 类
-继承AuthUser类后, User类继承了两个方法<br/>
+继承AuthUser类后, User类继承了两个方法
+
 1. **generate_auth_token()**
     + 生成用户token
 2. **verify_auth_token(cls, token)**

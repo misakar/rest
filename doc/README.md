@@ -15,6 +15,6 @@
 [flask编写API的核心思想](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTh64IFdvshxfpIhepB-a6PXl02q8qh1L3vBW7WmzyR338h25IR)
 
 ### 工具
-[mana](): flask项目构建工具 <br/>
-[rest](): flask API 工具集 <br/>
+[mana](https://github.com/neo1218/mana): flask项目构建工具 <br/>
+[rest](https://github.com/neo1218/rest): flask API 工具集 <br/>
 
