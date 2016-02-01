@@ -1,6 +1,5 @@
 rest: 基于flask的API库
 ===
-![rest logo](http://7xj431.com1.z0.glb.clouddn.com/rest.png) <br/>
 
 ## 基本思想
 rest库是对[木犀团队](https://github.com/Muxi-Studio)后端项目的总结。<br/>
@@ -32,3 +31,6 @@ rest 提供了如下几种类型的工具方便API的编写:
 
 ## LICENSE
 [MIT](https://github.com/neo1218/rest/blob/master/LICENSE)
+
+## I need rest
+![rest logo](http://7xj431.com1.z0.glb.clouddn.com/rest.png) <br/>
