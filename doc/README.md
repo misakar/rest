@@ -12,7 +12,7 @@
 ---
 ## 关于API编写
 ### 文章
-[flask编写API的核心思想](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTh64IFdvshxfpIhepB-a6PXl02q8qh1L3vBW7WmzyR338h25IR)
+[flask编写API的核心思想](http://neo1218.github.io/api/)
 
 ### 工具
 [mana](https://github.com/neo1218/mana): flask项目构建工具 <br/>

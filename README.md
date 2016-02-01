@@ -5,7 +5,7 @@ rest: 基于flask的API工具库
 rest库是对[木犀团队](https://github.com/Muxi-Studio)后端项目的总结。<br/>
 
 - [木犀后端API开发流程](https://github.com/neo1218/rest/blob/master/doc/README.md) <br/>
-- [使用flask编写API的核心思想]() <br/>
+- [使用flask编写API的核心思想](http://neo1218.github.io/api/) <br/>
 
 ## 工具文档:
 rest 提供了如下几种类型的工具方便API的编写:
