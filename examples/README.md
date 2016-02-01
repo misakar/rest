@@ -40,6 +40,7 @@ HelloAPI
         + id: Integer
         + username: String
         + email: String
+        + password: String
     + **返回信息**:
         + 状态码: 201
         + id: Integer
@@ -96,6 +97,3 @@ HelloAPI
 8. 部署
 
 完成
-
-## 在本地构建这个例子
-1. clone example 文件夹

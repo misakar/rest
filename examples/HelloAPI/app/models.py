@@ -94,6 +94,23 @@ class User(db.Model, UserMixin, AuthUser):
             return True
         return False
 
+    def to_json(self):
+        json_user = {
+            'id': self.id,
+            'username': self.username,
+            'email': self.email
+        }
+        return json_user
+
+    @staticmethod
+    def from_json(json_user):
+        user = User(
+            username = json_user.get('username'),
+            email = json_user.get('email'),
+            password = json_user.get('password')
+        )
+        return user
+
     def __repr__(self):
         return "<User %r>" % self.username
 

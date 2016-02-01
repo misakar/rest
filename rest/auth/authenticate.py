@@ -13,13 +13,13 @@ class AuthUser(object):
         )
         return s.dumps({'id': self.id})
 
-    @staticmethod
-    def verify_auth_token(token):
+    @classmethod
+    def verify_auth_token(Model, token):
         """verify the user with token"""
         s = Serializer(current_app.config['SECRET_KEY'])
         try:
             data = s.loads(token)
         except:
             return None
-        return User.query.get_or_404(data['id'])
+        return Model.query.get_or_404(data['id'])
 
