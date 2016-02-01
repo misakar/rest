@@ -1,4 +1,4 @@
-rest: 基于flask的API库
+rest: 基于flask的API工具库
 ===
 
 ## 基本思想
