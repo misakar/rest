@@ -4,8 +4,7 @@ from flask import current_app
 
 
 class AuthUser(object):
-
-
+    """用户验证类"""
     def generate_auth_token(self, expiration):
         """generate a token"""
         s = Serializer(
@@ -23,3 +22,4 @@ class AuthUser(object):
         except:
             return None
         return User.query.get_or_404(data['id'])
+

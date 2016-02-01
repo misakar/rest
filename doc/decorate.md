@@ -20,3 +20,20 @@ httpie测试:
 
 @paginate 装饰器遵循最新的API分页标准, 在头部定义link
 详见:http://tools.ietf.org/html/rfc5988
+
+## @admin_required token权限管理装饰器
+使用token后, rest库提供了@admin_required装饰器,
+前提是在用户类中实现**判断用户是否为管理员的is_admin()**方法。<br/>
+
+使用:
+
+    from rest.decorators import admin_required
+    from app.models import User
+
+    @api.route('/admin/')
+    @admin_required(User)
+    def admin():
+        pass
+
+这样只有管理员token可以访问/api/admin/路由, 其余用户访问将返回**403禁止访问**
+
