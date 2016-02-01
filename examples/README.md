@@ -73,26 +73,26 @@ HelloAPI
         + <code>from rest.auth import AuthUser</code>
 
 2. 依据文档字段, 创建<code>to_json</code>和<code>from_json</code>方法
-    + [to_json()]()
-    + [from_json()]() => 搭配<code>request.get_json()</code>使用
+    + [to_json()](https://github.com/neo1218/rest/blob/master/examples/HelloAPI/app/models.py#L97)
+    + [from_json()](https://github.com/neo1218/rest/blob/master/examples/HelloAPI/app/models.py#L106) => 搭配<code>request.get_json()</code>使用
 
 
 3. 编写**获取所有用户信息API**
-    + 使用**rest pagenate分页装饰器**, [详细代码]()
+    + 使用**rest pagenate分页装饰器**, [详细代码](https://github.com/neo1218/rest/blob/master/examples/HelloAPI/app/api/users.py#L15)
 
-4. 编写**获取特定用户信息API**
+4. 编写**获取特定用户信息API**, [详细代码](https://github.com/neo1218/rest/blob/master/examples/HelloAPI/app/api/users.py#21)
 
 
 5. 编写**创建用户API**
-    + 使用**rest admin_required装饰器**, [详细代码]()
+    + 使用**rest admin_required装饰器**, [详细代码](https://github.com/neo1218/rest/blob/master/examples/HelloAPI/app/api/users.py#L29)
 
 
 6. 编写**更新特定用户信息API**
-    + 使用**rest admin_required装饰器**, [详细代码]()
+    + 使用**rest admin_required装饰器**, [详细代码](https://github.com/neo1218/rest/blob/master/examples/HelloAPI/app/api/users.py#L40)
 
 
 7. 编写**删除特定用户API**
-    + 使用**rest admin_required装饰器**, [详细代码]()
+    + 使用**rest admin_required装饰器**, [详细代码](https://github.com/neo1218/rest/blob/master/examples/HelloAPI/app/api/users.py#L53)
 
 8. 部署
 
